@@ -4,7 +4,7 @@
         <p class="sub-title"><span>发表时间：{{ newsInfo.add_time | dateFormat }}</span><span>点击：{{newsInfo.click}}次</span></p>
         <hr>
         <div v-html="newsInfo.content"></div>
-        <comment>
+        <comment :artid="id">
         </comment>
     </div>
 </template>
