@@ -6,6 +6,7 @@ import shopcarCompontent from '../pages/shopcar'
 import searchCompontent from '../pages/search'
 import newsListCompontent from '../pages/newslist'
 import newsInfoCompontent from '../pages/newsInfo'
+import photoListCompontent from '../pages/photolist'
 
 
 
@@ -38,6 +39,9 @@ export default new Router({
         }, {
             path: '/home/newsInfo/:id',
             component: newsInfoCompontent
+        }, {
+            path: '/home/photoList',
+            component: photoListCompontent
         }
 
     ],
