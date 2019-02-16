@@ -7,6 +7,7 @@ import searchCompontent from '../pages/search'
 import newsListCompontent from '../pages/newslist'
 import newsInfoCompontent from '../pages/newsInfo'
 import photoListCompontent from '../pages/photolist'
+import photoesInfoCompontent from '../pages/photoesInfo'
 
 
 
@@ -42,6 +43,9 @@ export default new Router({
         }, {
             path: '/home/photoList',
             component: photoListCompontent
+        }, {
+            path: '/home/photoesinfo/:id',
+            component: photoesInfoCompontent
         }
 
     ],

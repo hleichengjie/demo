@@ -2,11 +2,15 @@ import Vue from 'vue'
 import App from './App'
 
 // 按需引入mint-ui
-import { Header, Swipe, SwipeItem, Button } from 'mint-ui'
-Vue.component(Header.name, Header)
-Vue.component(Swipe.name, Swipe)
-Vue.component(SwipeItem.name, SwipeItem)
-Vue.component(Button.name, Button)
+// import { Header, Swipe, SwipeItem, Button } from 'mint-ui'
+// Vue.component(Header.name, Header)
+// Vue.component(Swipe.name, Swipe)
+// Vue.component(SwipeItem.name, SwipeItem)
+// Vue.component(Button.name, Button)
+// 按需引入mint-ui会导致懒加载无法正常显示，故用全局引入
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
     // 初始化页面样式
 import './styles/common.css'
 // 引入MUI
@@ -35,5 +39,4 @@ new Vue({
     el: '#app',
     router,
     render: h => h(App),
-
 })
