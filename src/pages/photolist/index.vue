@@ -85,7 +85,7 @@ export default {
         },
         getImages(id){
             this.$http.get('api/getimages/'+id).then(res=>{
-                console.log(res.body.message)
+                // console.log(res.body.message)
                 this.imagesList=res.body.message
             })
         }
