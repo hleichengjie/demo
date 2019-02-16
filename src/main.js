@@ -16,7 +16,9 @@ import './styles/common.css'
 // 引入MUI
 import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
-
+// 缩略图组件
+import VuePreview from 'vue-pic-preview'
+Vue.use(VuePreview)
 import router from './router'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)

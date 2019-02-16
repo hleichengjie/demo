@@ -6,7 +6,7 @@
             <hr>
             <!-- 缩略图 -->
             <div class="thums">
-                <img v-for="(item, index) in thumimages" :key="index" :src="item.src" alt="" >
+                <img class="preview-img" v-for="(item, index) in thumimages" :key="index" :src="item.src" height="100" @click="$preview.open(index, thumimages)">
             </div>
             <div class="content" v-html="imageInfo.content"></div>
             <comment :artid="id">
@@ -30,6 +30,10 @@ export default {
         getthumimages(){
             this.$http.get('api/getthumimages/'+this.id).then(res=>{
                 console.log(res)
+                res.body.message.forEach(item => {
+            item.w = 600;
+            item.h = 400;
+          });
                 this.thumimages=res.body.message
             }),
              this.$http.get('api/getimageInfo/'+this.id).then(res=>{
@@ -56,13 +60,11 @@ export default {
         
     }
     .thums{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        img{
-            width: 45%;
-            height: 45%;
-        }
+         img{
+      margin: 10px;
+      box-shadow: 0 0 8px #999;
+    }
+        
     }
     .content{
         font-size: 14px;
