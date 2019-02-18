@@ -9,6 +9,7 @@ import newsInfoCompontent from '../pages/newsInfo'
 import photoListCompontent from '../pages/photolist'
 import photoesInfoCompontent from '../pages/photoesInfo'
 import goodsListCompontent from '../pages/goodslist'
+import goodsInfoCompontent from '../pages/goodsInfo'
 
 
 
@@ -49,6 +50,9 @@ export default new Router({
         }, {
             path: '/home/goodsList',
             component: goodsListCompontent
+        }, {
+            path: '/home/goodsInfo/:id',
+            component: goodsInfoCompontent
         }
 
     ],
